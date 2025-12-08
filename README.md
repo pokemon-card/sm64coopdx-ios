@@ -1,6 +1,8 @@
 # sm64coopdx-ios
 ![sm64coopdx Logo](textures/segment2/custom_coopdx_logo.rgba32.png)
 
+## This project has been abandoned as I don't have time and devices to work on it.
+
 ## Description
 
 A port of [sm64coopdx](https://github.com/coop-deluxe/sm64coopdx) to iOS
