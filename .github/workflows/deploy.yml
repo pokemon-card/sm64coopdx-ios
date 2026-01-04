@@ -23,6 +23,7 @@ jobs:
           
       - name: Build
         run: |
+          cd tools
           chmod +x build_ios.sh
           ./build_ios.sh iphoneos arm64 output.ipa
       
