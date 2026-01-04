@@ -18,7 +18,6 @@ jobs:
       - name: Install SDL2
         run: |
           git clone -b SDL2 https://github.com/libsdl-org/SDL.git SDL2
-          mkdir include
           cp -a SDL2/include include/
           mv include/include include/SDL2
           
