@@ -1,0 +1,31 @@
+name: make ipa
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  build_site:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Install dependencies
+        run: |
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          brew install make
+          brew install gcc@12
+          brew install mingw-w64
+          brew install sdl2
+          brew install glew
+          brew install python@3.13
+
+      - name: Build
+        run: |
+          chmod +x run-xcodebuild.sh
+          ./run-xcodebuild.sh iphoneos arm64 output.ipa
+      
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4.6.2
+        with:
+          path: build
