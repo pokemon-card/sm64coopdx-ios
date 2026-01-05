@@ -26,7 +26,7 @@ jobs:
           cd tools
           make
           cd ..
-          xcodebuild -target iOS
+          open sm64ios.xcworkspace 
           
       - name: Package IPA
         run: |
