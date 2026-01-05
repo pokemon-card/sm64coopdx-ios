@@ -26,8 +26,14 @@ jobs:
           cd tools
           make
           cd ..
-          chmod +x build.sh
-          ./build.sh iphoneos arm64 output.ipa
+          chmod +x build_ios.sh
+          ./build_ios.sh iphoneos arm64 output.ipa
+          
+      - name: Package IPA
+        run: |
+          cd sm64ios
+          chmod +x generate_ipa.sh
+          ./generate_ipa.sh iphoneos arm64 output.ipa
       
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4.6.2
