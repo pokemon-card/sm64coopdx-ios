@@ -27,7 +27,7 @@ jobs:
           make
           cd ..
           open sm64ios.xcworkspace
-          xcodebuild -target sm64coopdxios
+          xcodebuild -list -workspace sm64ios.xcworkspace
           
       - name: Package IPA
         run: |
