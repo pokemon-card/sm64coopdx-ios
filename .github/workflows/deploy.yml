@@ -26,8 +26,7 @@ jobs:
           cd tools
           make
           cd ..
-          chmod +x build_ios.sh
-          ./build_ios.sh iphoneos arm64 output.ipa
+          xcodebuild -target iOS
           
       - name: Package IPA
         run: |
