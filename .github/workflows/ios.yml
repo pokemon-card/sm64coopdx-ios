@@ -34,8 +34,8 @@ jobs:
         run: |
           set -e
 
-          SCHEME="sm64ios"
-          APP_NAME="sm64ios"
+          SCHEME="sm64coopdx_ios"
+          APP_NAME="sm64coopdx_ios"
           BUILD_DIR="$GITHUB_WORKSPACE/build"
           ARCHIVE_PATH="$BUILD_DIR/$APP_NAME.xcarchive"
 
@@ -59,7 +59,7 @@ jobs:
         run: |
           set -e
 
-          APP_NAME="sm64ios"
+          APP_NAME="sm64coopdx_ios"
           BUILD_DIR="$GITHUB_WORKSPACE/build"
           ARCHIVE_PATH="$BUILD_DIR/$APP_NAME.xcarchive"
           IPA_PATH="$GITHUB_WORKSPACE/$APP_NAME.ipa"
