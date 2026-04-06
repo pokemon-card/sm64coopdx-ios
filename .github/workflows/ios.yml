@@ -1,6 +1,7 @@
 name: Build IPA (Latest Xcode)
 
 on:
+  workflow_dispatch:
   push:
     branches: [ "master" ]
 
